@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quản lý sự kiện</title>
+  <link rel="stylesheet" href="css/sukien.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Admin Panel</h2>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="sukien.html" class="active">Sự kiện</a>
+        <a href="danhmuc.html">Danh mục</a>
+        <a href="dangky.html">Đăng ký</a>
+        <a href="hoadon.html">Hóa đơn</a>
+        <a href="diemdanh.html">Điểm danh</a>
+        <a href="taikhoan.html">Tài khoản</a>
+        <a href="danhgia.html">Đánh giá</a>
+        <a href="cauhoi.html">Câu hỏi</a>
+        <a href="ticket.html">Ticket</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="top-bar">
+        <input type="text" id="searchInput" placeholder="Tìm kiếm sự kiện...">
+        <select id="filterCategory"></select>
+        <select id="filterStatus">
+          <option value="">Tất cả trạng thái</option>
+          <option value="Sắp diễn ra">Sắp diễn ra</option>
+          <option value="Đang diễn ra">Đang diễn ra</option>
+          <option value="Đã kết thúc">Đã kết thúc</option>
+          <select id="eventCategory"></select>
+
+        </select>
+        
+        <button id="addEventBtn">+ Thêm sự kiện</button>
+      </header>
+
+      <section id="eventList" class="event-list"></section>
+
+      <footer class="pagination">
+        <button id="prevPage">&laquo; Trước</button>
+        <span id="pageInfo"></span>
+        <button id="nextPage">Sau &raquo;</button>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Modal thêm/sửa sự kiện -->
+  <div id="eventModal" class="modal hidden">
+    <div class="modal-content">
+      <h3 id="modalTitle">Thêm sự kiện</h3>
+      <form id="eventForm">
+        <input type="hidden" id="eventId">
+        <label>Tên sự kiện:<input type="text" id="eventName" required></label>
+        <label>Mô tả:<textarea id="eventDescription" required></textarea></label>
+        <label>Địa điểm:<input type="text" id="eventLocation" required></label>
+        <label>Ngày bắt đầu:<input type="date" id="eventStartDate" required></label>
+        <label>Ngày kết thúc:<input type="date" id="eventEndDate" required></label>
+        <label>Hình ảnh:<input type="file" id="eventImage" accept="image/*"></label>
+        <label>Phí tham gia:<input type="number" id="eventFee" required></label>
+        <label>Số lượng chỗ:<input type="number" id="eventSeats" required></label>
+        <label>Danh mục:<select id="eventCategory"></select></label>
+        <label>Trạng thái:<select id="eventStatus">
+          <option value="Sắp diễn ra">Sắp diễn ra</option>
+          <option value="Đang diễn ra">Đang diễn ra</option>
+          <option value="Đã kết thúc">Đã kết thúc</option>
+        </select></label>
+
+        <div class="form-actions">
+          <button type="submit">Lưu</button>
+          <button type="button" id="cancelModal">Hủy</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="js/logout.js"></script>
+  <script src="js/sukien.js"></script>
+</body>
+</html>

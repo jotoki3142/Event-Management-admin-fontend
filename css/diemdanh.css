@@ -1,0 +1,132 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin: 0 0 20px;
+  font-size: 24px;
+}
+
+.sidebar nav a, .sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  transition: background 0.3s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active,
+.sidebar a:hover,
+.sidebar a.active {
+  background-color: #0056b3;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 30px;
+  background-color: #fff;
+  overflow-y: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 0 0 20px 0;
+  font-size: 24px;
+  color: #007bff;
+}
+
+.filter-section {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-section label {
+  font-weight: bold;
+}
+
+.filter-section select {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.attendance-table th, .attendance-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.attendance-table th {
+  background-color: #007bff;
+  color: white;
+}
+
+.attendance-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.attendance-table .status {
+  font-weight: bold;
+}
+
+.attendance-table .status.present {
+  color: green;
+}
+
+.attendance-table .status.absent {
+  color: red;
+}
+
+.attendance-table button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.attendance-table .mark-present {
+  background-color: green;
+  color: white;
+}
+
+.attendance-table .mark-absent {
+  background-color: red;
+  color: white;
+}

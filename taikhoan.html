@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản lý Tài khoản</title>
+  <link rel="stylesheet" href="css/taikhoan.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Admin Panel</h2>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="sukien.html">Sự kiện</a>
+        <a href="danhmuc.html">Danh mục</a>
+        <a href="dangky.html">Đăng ký</a>
+        <a href="hoadon.html">Hóa đơn</a>
+        <a href="diemdanh.html">Điểm danh</a>
+        <a href="taikhoan.html" class="active">Tài khoản</a>
+        <a href="danhgia.html">Đánh giá</a>
+        <a href="cauhoi.html">Câu hỏi</a>
+        <a href="ticket.html">Ticket</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="header">
+        <h1>Quản lý Nhân viên</h1>
+        <button onclick="openNhanVienModal()">Thêm nhân viên</button>
+      </div>
+      <table class="account-table" id="nhanvienTable">
+        <thead>
+          <tr>
+            <th>Mã NV</th>
+            <th>Họ tên</th>
+            <th>Tuổi</th>
+            <th>Giới tính</th>
+            <th>Email</th>
+            <th>SĐT</th>
+            <th>Địa chỉ</th>
+            <th>Hành động</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <h2>Khách hàng</h2>
+      <table class="account-table" id="khachhangTable">
+        <thead>
+          <tr>
+            <th>Mã KH</th>
+            <th>Họ tên</th>
+            <th>Tuổi</th>
+            <th>Giới tính</th>
+            <th>Email</th>
+            <th>SĐT</th>
+            <th>Địa chỉ</th>
+            <th>Đăng ký</th>
+            <th>Hóa đơn</th>
+            <th>Tổng chi tiêu</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </main>
+  </div>
+
+  <div class="modal hidden" id="nhanVienModal">
+    <div class="modal-content">
+      <h3>Thêm / Sửa Nhân viên</h3>
+      <form id="nhanVienForm">
+        <input type="hidden" id="nvId">
+        <input type="text" id="nvName" placeholder="Họ tên" required>
+        <input type="number" id="nvAge" placeholder="Tuổi" min="18" max="100" required>
+        <select id="nvGender">
+          <option value="Nam">Nam</option>
+          <option value="Nữ">Nữ</option>
+          <option value="Khác">Khác</option>
+        </select>
+        <input type="email" id="nvEmail" placeholder="Email">
+        <input type="tel" id="nvPhone" placeholder="Số điện thoại">
+        <input type="text" id="nvAddress" placeholder="Địa chỉ">
+        <div class="modal-actions">
+          <button type="submit">Lưu</button>
+          <button type="button" onclick="closeNhanVienModal()">Hủy</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="js/logout.js"></script>
+  <script src="js/taikhoan.js"></script>
+</body>
+</html>

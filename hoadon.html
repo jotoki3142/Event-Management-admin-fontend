@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản lý Hóa đơn</title>
+  <link rel="stylesheet" href="css/hoadon.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Admin Panel</h2>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="sukien.html">Sự kiện</a>
+        <a href="danhmuc.html">Danh mục</a>
+        <a href="dangky.html">Đăng ký</a>
+        <a href="hoadon.html" class="active">Hóa đơn</a>
+        <a href="diemdanh.html">Điểm danh</a>
+        <a href="taikhoan.html">Tài khoản</a>
+        <a href="danhgia.html">Đánh giá</a>
+        <a href="cauhoi.html">Câu hỏi</a>
+        <a href="ticket.html">Ticket</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <h1>Quản lý Hóa đơn</h1>
+
+      <div class="filter-section">
+        <select id="filterStatus">
+          <option value="">Tất cả trạng thái</option>
+          <option value="Đã thanh toán">Đã thanh toán</option>
+          <option value="Chưa thanh toán">Chưa thanh toán</option>
+          <option value="Hủy">Hủy</option>
+        </select>
+      </div>
+
+      <table class="invoice-table">
+        <thead>
+          <tr>
+            <th>Mã HĐ</th>
+            <th>Khách hàng</th>
+            <th>Ngày tạo</th>
+            <th>Tổng tiền</th>
+            <th>Trạng thái</th>
+            <th>Chi tiết</th>
+          </tr>
+        </thead>
+        <tbody id="invoiceList"></tbody>
+      </table>
+
+      <div id="invoiceDetailModal" class="modal hidden">
+        <div class="modal-content">
+          <h3>Chi tiết hóa đơn</h3>
+          <p><strong>Khách hàng:</strong> <span id="detailCustomer"></span></p>
+          <p><strong>Ngày tạo:</strong> <span id="detailDate"></span></p>
+          <p><strong>Tổng tiền:</strong> <span id="detailTotal"></span></p>
+          <p><strong>Thanh toán qua:</strong> <span id="detailPayment"></span></p>
+          <p><strong>Nhân viên xử lý:</strong> <span id="detailStaff"></span></p>
+          <p><strong>Gắn với đăng ký:</strong> <span id="detailRegistration"></span></p>
+          <button id="closeModal">Đóng</button>
+        </div>
+      </div>
+
+    </main>
+  </div>
+  <script src="js/logout.js"></script>
+  <script src="js/hoadon.js"></script>
+</body>
+</html>

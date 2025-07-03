@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Câu hỏi hỗ trợ</title>
+  <link rel="stylesheet" href="css/cauhoi.css">
+
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Admin Panel</h2>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="sukien.html">Sự kiện</a>
+        <a href="danhmuc.html">Danh mục</a>
+        <a href="dangky.html">Đăng ký</a>
+        <a href="hoadon.html">Hóa đơn</a>
+        <a href="diemdanh.html">Điểm danh</a>
+        <a href="taikhoan.html">Tài khoản</a>
+        <a href="danhgia.html">Đánh giá</a>
+        <a href="cauhoi.html" class="active">Câu hỏi</a>
+        <a href="ticket.html">Ticket</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <h1>Câu hỏi hỗ trợ</h1>
+
+      <div class="filter-section">
+        <select id="filterEvent">
+          <option value="">Tất cả sự kiện</option>
+        </select>
+        <select id="filterStatus">
+          <option value="">Tất cả trạng thái</option>
+          <option value="Đã xử lý">Đã xử lý</option>
+          <option value="Chưa xử lý">Chưa xử lý</option>
+        </select>
+        <button onclick="renderQuestions()">Lọc</button>
+      </div>
+      <table class="question-table">
+        <thead>
+          <tr>
+            <th>Sự kiện</th>
+            <th>Khách hàng</th>
+            <th>Câu hỏi</th>
+            <th>Thời gian</th>
+            <th>Trạng thái</th>
+            <th>Hành động</th>
+          </tr>
+        </thead>
+        <tbody id="questionList"></tbody>
+      </table>
+    </main>
+    <div id="logout-container"></div>
+  </div>
+  <script src="js/logout.js"></script>
+  <script src="js/cauhoi.js"></script>
+</body>
+</html>

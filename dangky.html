@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản lý Đăng ký</title>
+  <link rel="stylesheet" href="css/dangky.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Admin Panel</h2>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="sukien.html">Sự kiện</a>
+        <a href="danhmuc.html">Danh mục</a>
+        <a href="dangky.html" class="active">Đăng ký</a>
+        <a href="hoadon.html">Hóa đơn</a>
+        <a href="diemdanh.html">Điểm danh</a>
+        <a href="taikhoan.html">Tài khoản</a>
+        <a href="danhgia.html">Đánh giá</a>
+        <a href="cauhoi.html">Câu hỏi</a>
+        <a href="ticket.html">Ticket</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <h1>Quản lý Đăng ký</h1>
+
+      <div class="filter-section">
+        <select id="filterEvent"></select>
+        <select id="filterStatus">
+          <option value="">Tất cả trạng thái</option>
+          <option value="Xử lý">Xử lý</option>
+          <option value="Hủy">Hủy</option>
+          <option value="Thành công">Thành công</option>
+          <option value="Điểm danh">Điểm danh</option>
+        </select>
+      </div>
+
+      <div id="registrationStats" class="stats"></div>
+      <table class="registration-table">
+        <thead>
+          <tr>
+            <th>Sự kiện</th>
+            <th>Khách hàng</th>
+            <th>Trạng thái</th>
+            <th>Vị trí ghế</th>
+            <th>Cập nhật</th>
+          </tr>
+        </thead>
+        <tbody id="registrationList"></tbody>
+      </table>
+    </main>
+  </div>
+  <script src="js/logout.js"></script>
+  <script src="js/dangky.js"></script>
+</body>
+</html>

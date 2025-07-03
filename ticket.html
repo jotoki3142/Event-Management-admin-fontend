@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ticket hỗ trợ</title>
+  <link rel="stylesheet" href="css/ticket.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Admin Panel</h2>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="sukien.html">Sự kiện</a>
+        <a href="danhmuc.html">Danh mục</a>
+        <a href="dangky.html">Đăng ký</a>
+        <a href="hoadon.html">Hóa đơn</a>
+        <a href="diemdanh.html">Điểm danh</a>
+        <a href="taikhoan.html">Tài khoản</a>
+        <a href="danhgia.html">Đánh giá</a>
+        <a href="cauhoi.html">Câu hỏi</a>
+        <a href="ticket.html" class="active">Ticket</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <h1>Danh sách Ticket hỗ trợ</h1>
+
+      <table class="ticket-table">
+        <thead>
+          <tr>
+            <th>Khách hàng</th>
+            <th>Nội dung</th>
+            <th>Nhân viên</th>
+            <th>Giải đáp</th>
+            <th>Trạng thái</th>
+            <th>Hành động</th>
+          </tr>
+        </thead>
+        <tbody id="ticketList"></tbody>
+      </table>
+    </main>
+
+    <div class="modal hidden" id="ticketModal">
+      <div class="modal-content">
+        <h3>Cập nhật Ticket</h3>
+        <form id="ticketForm">
+          <input type="hidden" id="ticketId">
+          <label>Gán nhân viên xử lý:</label>
+          <select id="assignStaff"></select>
+          <label>Nhập nội dung giải đáp:</label>
+          <textarea id="replyContent" rows="4"></textarea>
+          <div class="modal-actions">
+            <button type="submit">Lưu</button>
+            <button type="button" onclick="closeTicketModal()">Hủy</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="js/logout.js"></script>
+    <script src="js/ticket.js"></script>
+  </div>
+</body>
+</html>

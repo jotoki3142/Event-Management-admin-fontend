@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản lý điểm danh</title>
+  <link rel="stylesheet" href="css/diemdanh.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Admin Panel</h2>
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="sukien.html">Sự kiện</a>
+        <a href="danhmuc.html">Danh mục</a>
+        <a href="dangky.html">Đăng ký</a>
+        <a href="hoadon.html">Hóa đơn</a>
+        <a href="diemdanh.html" class="active">Điểm danh</a>
+        <a href="taikhoan.html">Tài khoản</a>
+        <a href="danhgia.html">Đánh giá</a>
+        <a href="cauhoi.html">Câu hỏi</a>
+        <a href="ticket.html">Ticket</a>
+    </nav>
+  </aside>
+  
+    <main class="main-content">
+        <h1>Quản lý điểm danh</h1>
+
+      <section class="filter-section">
+        <label for="filter-event">Sự kiện:</label>
+        <select id="filter-event"></select>
+      </section>
+
+      <table class="attendance-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Khách hàng</th>
+            <th>Sự kiện</th>
+            <th>Ghế</th>
+            <th>Trạng thái</th>
+            <th>Thao tác</th>
+          </tr>
+        </thead>
+        <tbody id="attendance-body">
+          <!-- Dữ liệu điểm danh sẽ được JS render tại đây -->
+        </tbody>
+      </table>
+    </main>
+  </div>
+  <script src="js/logout.js"></script>
+  <script src="js/diemdanh.js"></script>
+</body>
+</html>

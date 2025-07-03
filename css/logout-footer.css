@@ -1,0 +1,30 @@
+.logout-fixed {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+#logout-button {
+  background-color: crimson;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+#logout-button:hover {
+  background-color: darkred;
+}
+
+#logout-button .icon {
+  font-size: 16px;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản lý Danh mục Sự kiện</title>
+  <link rel="stylesheet" href="css/danhmuc.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Admin Panel</h2>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="sukien.html">Sự kiện</a>
+        <a href="danhmuc.html" class="active">Danh mục</a>
+        <a href="dangky.html">Đăng ký</a>
+        <a href="hoadon.html">Hóa đơn</a>
+        <a href="diemdanh.html">Điểm danh</a>
+        <a href="taikhoan.html">Tài khoản</a>
+        <a href="danhgia.html">Đánh giá</a>
+        <a href="cauhoi.html">Câu hỏi</a>
+        <a href="ticket.html">Ticket</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <h1>Quản lý Danh mục Sự kiện</h1>
+
+      <div class="form-section">
+        <input type="text" id="categoryInput" placeholder="Nhập tên danh mục">
+        <button id="addCategoryBtn">Thêm danh mục</button>
+      </div>
+
+      <ul id="categoryList" class="category-list"></ul>
+    </main>
+  </div>
+  <script src="js/logout.js"></script>
+  <script src="js/danhmuc.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đánh giá sự kiện</title>
+  <link rel="stylesheet" href="css/danhgia.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Admin Panel</h2>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="sukien.html">Sự kiện</a>
+        <a href="danhmuc.html">Danh mục</a>
+        <a href="dangky.html">Đăng ký</a>
+        <a href="hoadon.html">Hóa đơn</a>
+        <a href="diemdanh.html">Điểm danh</a>
+        <a href="taikhoan.html">Tài khoản</a>
+        <a href="danhgia.html"class="active">Đánh giá</a>
+        <a href="cauhoi.html">Câu hỏi</a>
+        <a href="ticket.html">Ticket</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <h1>Đánh giá sự kiện</h1>
+
+      <div class="filter-section">
+        <select id="filterEvent">
+          <option value="">Tất cả sự kiện</option>
+        </select>
+        <select id="filterRating">
+          <option value="">Tất cả điểm</option>
+          <option value="5">5 Sao</option>
+          <option value="4">4 Sao</option>
+          <option value="3">3 Sao</option>
+          <option value="2">2 Sao</option>
+          <option value="1">1 Sao</option>
+        </select>
+        <input type="date" id="filterDate">
+        <input type="text" id="filterCustomer" placeholder="Tên khách hàng">
+        <button onclick="renderReviews()">Lọc</button>
+      </div>
+
+      <table class="review-table">
+        <thead>
+          <tr>
+            <th>Sự kiện</th>
+            <th>Khách hàng</th>
+            <th>Điểm</th>
+            <th>Bình luận</th>
+            <th>Thời gian</th>
+            <th>Hành động</th>
+          </tr>
+        </thead>
+        <tbody id="reviewList"></tbody>
+      </table>
+
+      <div class="summary">
+        <h3>Phân tích mức độ hài lòng</h3>
+        <p id="summaryResult"></p>
+      </div>
+    </main>
+  </div>
+  <script src="js/logout.js"></script>
+  <script src="js/danhgia.js"></script>
+</body>
+</html>
