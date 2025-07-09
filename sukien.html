@@ -59,8 +59,17 @@
         <label>Tên sự kiện:<input type="text" id="eventName" required></label>
         <label>Mô tả:<textarea id="eventDescription" required></textarea></label>
         <label>Địa điểm:<input type="text" id="eventLocation" required></label>
-        <label>Ngày bắt đầu:<input type="date" id="eventStartDate" required></label>
-        <label>Ngày kết thúc:<input type="date" id="eventEndDate" required></label>
+<div class="row-date-time">
+  <label for="eventStartDate">Ngày bắt đầu:</label>
+  <input type="date" id="eventStartDate" required>
+  <input type="time" id="eventStartTime" required>
+</div>
+
+<div class="row-date-time">
+  <label for="eventEndDate">Ngày kết thúc:</label>
+  <input type="date" id="eventEndDate" required>
+  <input type="time" id="eventEndTime" required>
+</div>
         <label>Hình ảnh:<input type="file" id="eventImage" accept="image/*"></label>
         <label>Phí tham gia:<input type="number" id="eventFee" required></label>
         <label>Số lượng chỗ:<input type="number" id="eventSeats" required></label>

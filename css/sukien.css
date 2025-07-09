@@ -219,3 +219,22 @@ body {
   background-color: #007bff;
   color: white;
 }
+
+.row-date-time {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.row-date-time label {
+  min-width: 120px;
+  font-weight: bold;
+}
+
+.row-date-time input[type="date"],
+.row-date-time input[type="time"] {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
