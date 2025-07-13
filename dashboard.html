@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard - Admin Panel</title>
-  <link rel="stylesheet" href="css/dashboard.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="css/dashboard.css">
 
 </head>
 <body>
   <div class="container">
-    <aside class="sidebar">
+    <div class="sidebar">
       <h2>Admin Panel</h2>
       <nav>
         <a href="dashboard.html" class="active">Dashboard</a>
@@ -24,40 +23,53 @@
         <a href="cauhoi.html">Câu hỏi</a>
         <a href="ticket.html">Ticket</a>
       </nav>
-    </aside>
+    </div>
 
-    <main class="main-content">
-      <header class="top-bar">
-        <input type="text" placeholder="Tìm kiếm..." id="searchInput" />
-        <select id="filterTime">
-          <option value="today">Hôm nay</option>
-          <option value="week">Tuần này</option>
-          <option value="month">Tháng này</option>
+    <div class="main-content">
+
+      <div class="top-bar">
+        <input type="text" placeholder="Tìm kiếm...">
+        <select>
+          <option>Hôm nay</option>
+          <option>Tuần này</option>
+          <option>Tháng này</option>
         </select>
-      </header>
+      </div>
 
-      <section class="dashboard-stats">
+      <div class="dashboard-stats">
         <div class="stat-card" id="totalEvents">Tổng số sự kiện: <span>0</span></div>
         <div class="stat-card" id="upcomingEvents">Sắp diễn ra: <span>0</span></div>
         <div class="stat-card" id="activeEvents">Đang diễn ra: <span>0</span></div>
         <div class="stat-card" id="finishedEvents">Đã kết thúc: <span>0</span></div>
         <div class="stat-card" id="totalUsers">Người đăng ký: <span>0</span></div>
         <div class="stat-card" id="totalRevenue">Doanh thu: <span>0 VNĐ</span></div>
-      </section>
+      </div>
 
-      <section class="top-events">
+      <div class="top-events">
         <h3>Top sự kiện đăng ký nhiều nhất</h3>
         <ul id="topEventsList"></ul>
-      </section>
+      </div>
 
-      <section class="chart-section">
+      <div class="chart-section" style="display: flex; gap: 20px;">
+        <div style="flex: 1; max-width: 300px;">
+          <h3>Tỷ lệ đánh giá sự kiện</h3>
+          <canvas id="ratingChart" style="max-height: 200px;"></canvas>
+        </div>
+        <div style="flex: 1;">
+          <h3>Top sự kiện theo đánh giá</h3>
+          <ul id="ratingEventsList"></ul>
+        </div>
+      </div>
+
+      <div class="chart-section">
         <h3>Xu hướng tham gia theo tháng</h3>
-        <canvas id="trendChart" width="600" height="300"></canvas>
-      </section>
-    </main>
+        <canvas id="trendChart"></canvas>
+      </div>
+    </div>
   </div>
-  <script src="js/logout.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="js/dashboard.js"></script>
 </body>
 </html>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+  <script src="js/logout.js"></script>
+  <script src="js/dashboard.js"></script>

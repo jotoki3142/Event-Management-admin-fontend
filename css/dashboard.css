@@ -86,7 +86,6 @@ body {
   margin-top: 40px;
 }
 
-
 .account-box {
   position: absolute;
   top: 20px;
@@ -121,3 +120,22 @@ body {
   transition: 0.2s ease;
 }
 
+.event-card {
+  background-color: #e9f5ff;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.event-name {
+  font-weight: bold;
+}
+
+.event-rating {
+  color: #007bff;
+  font-size: 14px;
+}
