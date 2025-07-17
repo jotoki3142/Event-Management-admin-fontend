@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="css/admin-info.css">
+<div id="admin-info-box" class="account-box">
+  <div class="account-info" id="admin-avatar-toggle">
+    <span id="admin-name">Admin</span>
+    <img src="img/user-icon.png" alt="Avatar" class="avatar">
+  </div>
+  <div class="account-menu hidden" id="admin-menu">
+    <button id="admin-info-btn">Thông tin</button>
+  </div>
+</div>
+<div class="admin-info-modal hidden" id="admin-info-modal">
+  <div class="admin-info-content modern">
+    <h2>Thông tin cá nhân</h2>
+    <form id="admin-info-form">
+      <div class="admin-info-grid">
+        <div class="admin-info-field">
+          <label for="admin-fullname"><span class="icon">👤</span> Họ và tên</label>
+          <input type="text" id="admin-fullname" required>
+        </div>
+        <div class="admin-info-field">
+          <label for="admin-gender"><span class="icon">⚧️</span> Giới tính</label>
+          <select id="admin-gender">
+            <option value="Nam">Nam</option>
+            <option value="Nữ">Nữ</option>
+            <option value="Khác">Khác</option>
+          </select>
+        </div>
+        <div class="admin-info-field">
+          <label for="admin-age"><span class="icon">🎂</span> Số tuổi</label>
+          <input type="number" id="admin-age" min="18" max="100" required>
+        </div>
+        <div class="admin-info-field">
+          <label for="admin-address"><span class="icon">🏠</span> Địa chỉ</label>
+          <input type="text" id="admin-address" required>
+        </div>
+        <div class="admin-info-field">
+          <label for="admin-email"><span class="icon">✉️</span> Email</label>
+          <input type="email" id="admin-email" required>
+        </div>
+        <div class="admin-info-field">
+          <label for="admin-phone"><span class="icon">📞</span> Số điện thoại</label>
+          <input type="tel" id="admin-phone" required pattern="[0-9]{10,11}">
+        </div>
+      </div>
+      <div class="admin-info-actions">
+        <button type="submit" id="admin-save-btn">Lưu</button>
+        <button type="button" id="admin-delete-btn" class="danger">Xóa dữ liệu</button>
+        <button type="button" id="admin-cancel-btn">Đóng</button>
+      </div>
+    </form>
+  </div>
+</div> 

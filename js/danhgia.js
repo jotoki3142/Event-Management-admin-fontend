@@ -1,5 +1,3 @@
-// File: js/danhgia.js
-
 let reviews = JSON.parse(localStorage.getItem('reviews')) || [];
 let events = JSON.parse(localStorage.getItem('events')) || [];
 let customers = JSON.parse(localStorage.getItem('customers')) || [];
